@@ -1,0 +1,32 @@
+Company: TechNova Electronics
+Department: AI Research and Automation
+Last Updated: October 2025
+
+Overview:
+TechNova Electronics is focused on building smart automation systems for electronics assembly lines.
+The company integrates AI-based vision inspection, predictive maintenance, and autonomous quality control.
+
+AI Projects:
+1. Vision Quality Inspector
+   - Uses convolutional neural networks (CNN) to detect visual defects in LED panels.
+   - Accuracy: 97% on real production data.
+   - Built using PyTorch and OpenCV.
+
+2. Predictive Maintenance System
+   - Collects temperature, vibration, and power data from robotic arms.
+   - Uses a random forest model to predict potential failures before they happen.
+   - Reduces downtime by 25%.
+
+3. MES Data Integration
+   - The Manufacturing Execution System (MES) records every product barcode during assembly.
+   - Data is logged in a centralized MySQL database.
+   - Each production line updates the system using Python scripts and barcode scanners.
+
+Team Members:
+- Jasman Jasman – AI Engineer, focuses on computer vision and system integration.
+- Alice Lee – Data Scientist, develops predictive models and data dashboards.
+- John Carter – Software Engineer, maintains MES connectivity and API interfaces.
+
+Future Plan:
+- Integrate LLM-based assistant for production line troubleshooting.
+- Expand RAG system to access equipment manuals and error logs.

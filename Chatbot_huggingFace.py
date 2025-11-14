@@ -53,9 +53,10 @@ Rules:
 
 """
 
+
 agent = create_agent(
     model=llm,
-    tools= [execute_sql],
+    tools=[execute_sql],
     system_prompt=SYSTEM_PROMPT,
     context_schema=RuntimeContext,
 )
@@ -64,12 +65,11 @@ agent = create_agent(
 question = "Which table has the largest number of entries?"
 
 for step in agent.stream(
-    {"messages":question },
+    {"messages": question},
     context=RuntimeContext(db=db),
-    stream_mode='values',
-
+    stream_mode="values",
 ):
-    step['messages'][-1].pretty_print()
+    step["messages"][-1].pretty_print()
 
 
 

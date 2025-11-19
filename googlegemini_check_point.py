@@ -5,8 +5,8 @@ from langgraph.graph import StateGraph, START, END, MessagesState
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, RemoveMessage
 from typing import Literal
 from langgraph.checkpoint.memory import InMemorySaver
-from langgraph.checkpoint.postgres import PostgresSaver
-import psycopg2
+# from langgraph.checkpoint.postgres import PostgresSaver
+# import psycopg2
 
 
 load_dotenv()
@@ -113,10 +113,10 @@ graph.add_edge("summarize_messages", END)
 checkpointer = InMemorySaver()
 
 graph_compiled = graph.compile(checkpointer)
+config = {"configurable": {"thread_id": "1"}}
+graph_compiled.invoke(State(messages=[]), config)
 
-graph_compiled.invoke(State(messages = []))
 
-config1 = {"configurable": {"thread_id": "1"}}
-graph_compiled.invoke(State(), config1)
+
 
 
